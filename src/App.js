@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
-
-import './style.css';
+import Navbar from './components/Navbar';
+import User from './components/User';
 
 export default function App() {
   return (
@@ -12,7 +11,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Add your routes here  */}
+          <Route path="/users/:username" element={<User />} />
         </Routes>
       </div>
     </Router>
